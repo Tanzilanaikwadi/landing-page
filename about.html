@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MyWebsite</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #34495e;
+      color: white;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      font-size: 28px;
+      color: #ecf0f1;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 25px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 5px;
+    }
+
+    .navbar ul li a:hover {
+      background-color: #1abc9c;
+      color: #34495e;
+    }
+
+    /* About Section */
+    .about-section {
+      background-image: url('/abbbbbbooouuuttt.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    }
+
+    .about-section .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-section h2 {
+      font-size: 50px;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .about-section p {
+      font-size: 20px;
+      color: #dcdcdc;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Our Mission, Vision, and Values */
+    .mission-vision-values {
+      background-color: #f4f4f5;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .mission-vision-values h3 {
+      font-size: 36px;
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+
+    .mission-vision-values p {
+      font-size: 18px;
+      color: #768080;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .mission-vision-values .grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #a6c3ca;
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h4 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+
+    /* Team Section */
+    .team-section {
+      background-color: #9a7575;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .team-section h3 {
+      font-size: 36px;
+      color: #34495e;
+      margin-bottom: 40px;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      background-color: rgb(197, 178, 178);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 220px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .team-member h4 {
+      font-size: 22px;
+      color: #34495e;
+      margin-bottom: 10px;
+    }
+
+    .team-member p {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #34495e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .mission-vision-values .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 80%;
+      }
+
+      .team-members {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-member {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar">
+      <h1>MyWebsite</h1>
+      <ul>
+        <li><a href="/landling.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/service.html">Services</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="content">
+      <h2>About Us</h2>
+      <p>We are a team of passionate professionals committed to helping businesses succeed online. With a combination of creativity, strategy, and cutting-edge technology, we offer tailored solutions that cater to your specific needs.</p>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values Section -->
+  <section class="mission-vision-values">
+    <h3>Our Mission, Vision & Values</h3>
+    <p>At MyWebsite, we focus on delivering results-driven solutions with a clear purpose and vision. We aim to build strong relationships and deliver exceptional services that drive success for businesses worldwide.</p>
+    <div class="grid">
+      <div class="card">
+        <h4>Our Mission</h4>
+        <p>We empower businesses by creating digital experiences that drive growth and create long-lasting relationships with customers.</p>
+      </div>
+      <div class="card">
+        <h4>Our Vision</h4>
+        <p>To be the leading digital agency, helping businesses scale and achieve their full potential in the digital world.</p>
+      </div>
+      <div class="card">
+        <h4>Our Values</h4>
+        <p>We value integrity, creativity, innovation, and customer satisfaction. We believe in making a difference for every client we serve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <h3>Meet Our Team</h3>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="https://t3.ftcdn.net/jpg/06/36/69/86/360_F_636698674_DroChEj5eWmZiaZOSDMnj8hcDqqw74Fp.jpg" alt="John Doe">
+        <h4>Emma Charlotte</h4>
+        <p>CEO & Founder</p>
+      </div>
+      <div class="team-member
